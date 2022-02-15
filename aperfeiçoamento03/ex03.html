@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando Array</title>
+</head>
+<body>
+<h1>Treinando JavaScript - Array</h1>
+
+<h2>Deuses Nórdicos</h2>
+<ul
+id="deuses"> Odinn<br><br>Freyja<br><br>Thor<br><br>Frigg<br><br>Sif<br><br>Loki<br><br>Indunn<br><br>Freyr<br><br>Tyr
+</ul>
+<p class="p1" id="p1"></p>
+<p id="p2"></p>
+
+<script>
+var deuses=["Odinn","Freyja","Thor","Frigg","Sif","Loki","Idunn","Freyr","Tyr"];
+document.getElementById("p1").innerHTML="Possui um total de " +deuses.length+ " posições dentro do Array." ;
+
+deuses.sort()
+
+document.getElementById("p2").innerHTML = deuses;
+
+</script>
+
+
+</body>
+</html>

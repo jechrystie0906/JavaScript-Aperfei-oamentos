@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definir maior idade</title>
+</head>
+<body>
+   <h1>Exercício 03: Calculo de idade</h1> 
+
+<label for= "anonasc">Ano de Nascimento:</label>
+<input type="text" id="anonasc"/> 
+<input type="submit" value="Enviar" onclick="validar()">
+<div id="resultado"></div>
+
+<p class="mensagem" id="mensagem"></p>
+
+
+<script>
+function validar(){
+    var ano= Number(document.getElementById("anonasc").value);
+    var resultado= 2022-ano;
+    var mensagem= document.getElementById("mensagem");
+
+if(resultado>=18){
+    mensagem.innerHTML="Você tem " +resultado+ " anos e é maior de idade!";}
+    else if (resultado<18){
+        mensagem.innerHTML= "Você tem " +resultado+ " anos e é menor de idade!";
+        return event.preventDefault();
+    }
+}
+  
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

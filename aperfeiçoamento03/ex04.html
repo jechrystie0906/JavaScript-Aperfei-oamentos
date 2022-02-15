@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando Array</title>
+</head>
+<body>
+<h1>Treinando JavaScript - Length</h1>
+
+<h2>Contagem de Caracteres</h2>
+<br><br>
+
+<input type="text" id="texto">
+<input type="submit" value="Enviar" onclick="enviar()"/>
+<br><br>
+<p class="p1" id="p1"></p>
+<p id="p2"></p>
+
+<script>
+function enviar(){
+    var texto= document.getElementById("texto").value;
+    document.getElementById("p1").innerHTML="A palavra enviada possui um total de " + texto.length + " letras";
+}
+</script>
+
+
+</body>
+</html>

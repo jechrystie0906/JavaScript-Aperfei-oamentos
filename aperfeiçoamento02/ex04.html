@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de setenças</title>
+</head>
+<body>
+    <h1>Digite uma frase</h1>
+
+<label for= "frase">Digite uma frase:</label>
+<input type="text" id="frase"/> 
+<input type="submit" value="Enviar" onclick="validar()">
+<div id="enviar"></div>
+
+<p class="mensagem" id="mensagem"></p>
+
+<script>
+    function validar(){
+        var sentence= document.getElementById("frase").value;                                              
+        var word= 'não';
+        var mensagem= document.getElementById("mensagem");
+
+        mensagem.innerHTML=sentence.includes(word);   
+        
+        if(sentence.includes(word)){
+            mensagem.innerHTML="A palavra 'não' está inclusa na frase";
+        } else{
+            mensagem.innerHTML="A palavra 'não' está ausente na frase";
+        }
+
+    }
+</script>
+
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                    

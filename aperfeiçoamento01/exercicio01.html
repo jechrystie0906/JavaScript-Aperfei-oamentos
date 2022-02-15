@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aperfeiçoamento 01</title>
+</head>
+<body>
+    <h1>Exercício 01: Valores </h1> 
+    <label for="Valor1">1ºNúmero:</label>
+   <input type="number" id="num1"> <br><br>
+   <label for="Valor2">2ºNúmero:</label>
+   <input type="number" id="num2">
+   <input type="submit" value="Enviar" onclick="enviar()"/>
+    
+<p class="mensagem" id="mensagem"></p>
+<p class="mensagem2" id="mensagem2"></p>
+<p class="mensagem3" id="mensagem3"></p>
+
+   <script>
+       function enviar(){
+        var valor1= Number(document.getElementById("num1").value);
+           var valor2= Number(document.getElementById("num2").value);
+           var mensagem= document.getElementById("mensagem");
+           var mensagem2= document.getElementById("mensagem2");
+           var mensagem3= document.getElementById("mensagem3");
+
+           if (valor1<valor2){
+               mensagem.innerHTML = + valor1 + " é menor do que o de " + valor2 +"!";
+               return event.preventDefault();
+           }
+           else{
+               mensagem2.innerHTML = + valor1 + " é maior do que o de " + valor2 +"!";
+           }
+               
+          
+        
+       }
+   </script>
+
+   
+   
+</body>
+</html>
