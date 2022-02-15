@@ -1,2 +1,2 @@
-# JavaScript-Aperfei-oamentos
+# JavaScript-Aperfeiçoamentos
 Exercícios de treino do JavaScript
