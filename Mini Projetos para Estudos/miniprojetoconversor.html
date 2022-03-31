@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Projeto Cotaçãode Moeda</title>
+</head>
+<body>
+    <h1>Cotação de Moedas </h1> 
+
+    <label>Selecione a Moeda:
+        <select name="select" id="moeda">
+            <option value="btc">BTC</option>
+            <option value="eur">EUR</option>
+            <option value="usd">USD</option> 
+        </select>
+          <button onclick="cotar()">Cotar Moeda</button>
+          <br>
+          <label>Valor da moeda em REAL:
+            <label name="high" type="text" id="high" size="60"></label><br/>
+
+    <script>
+          function cotar(){
+          var cotacao = document.getElementById('moeda').value;
+            var url = `http://economia.awesomeapi.com.br/json/${cotacao}-BR`
+    
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, false);
+            xhr.send();
+    
+                    var resultado = JSON.parse(xhr.responseText);
+                    document.getElementById("high").innerHTML = resultado[0].high;
+                    //quando o que nos retorna fo um array usar [posição dentro do array, exemplo acima 0] para acessar o objeto que necessitamos
+                }
+            
+</script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aperfeiçoando JavaScript </title>
+</head>
+<body>
+<h1>-Treinando Repetições-</h1>
+<h2>Utilizando forEach</h2>
+
+<p id="p1"></p>
+<script>
+const resultado = ["Repetição", "Repetição", "Repetição", "Repetição", "Repetição"];
+var texto=""
+for (var x in resultado){
+    texto +=resultado[x] + " ";
+}
+document.getElementById("p1").innerHTML=texto;
+
+</script>
+</body>
+</html>

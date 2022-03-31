@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Projeto CEP</title>
+</head>
+<body>
+    <h1>Buscador de Endereço </h1> 
+
+    <label>Cep:
+    <input name="cep" type="text" id="cep" 
+            /></label><br />
+    <button onclick="pesquisarCep()">Pesquisar CEP</button>
+    <br>
+    <label>Rua:
+    <label name="address" type="text" id="address" size="60"></label><br/>
+    <label>Bairro:
+    <label name="district" type="text" id="district" size="60"></label><br/>
+    <label>Cidade:
+    <label name="city" type="text" id="city" size="60"></label><br/>
+    <label>Estado:
+    <label name="state" type="text" id="state" size="60"></label><br/>
+
+
+    <label>Cep:
+    <label name="cep1" type="text" id="cepLabel" size="60"></label><br/>
+
+    <script>
+          function pesquisarCep(){
+          var cep = document.getElementById('cep').value;
+            var url = 'https://cep.awesomeapi.com.br/json/'+ cep
+    
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, false);
+            xhr.send();
+    
+                    var resultado = JSON.parse(xhr.responseText);
+                    document.getElementById("address").innerHTML = resultado.address;
+                    document.getElementById("district").innerHTML = resultado.district;
+                    document.getElementById("city").innerHTML = resultado.city;
+                    document.getElementById("state").innerHTML = resultado.state;
+                    document.getElementById('cepLabel').innerHTML = resultado.cep;
+                }
+            
+</script>
+</body>
+
+</html>

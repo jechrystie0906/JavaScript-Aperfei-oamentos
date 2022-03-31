@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aperfeiçoamento JavaScript</title>
+</head>
+<body>
+<h1>Trerinando Array</h1>
+<h2>Usando o Find</h2>
+<p id="p"></p>
+<p class="p1" id="p1"></p>
+<p id="p2"></p>
+
+<script>
+var usuarios = [
+{ nome: 'Caio', idade: 25, empresa: 'Google'},
+{ nome: 'Tiago', idade: 35, empresa: 'Microsoft'},
+{ nome: 'Felipe', idade: 30, empresa: 'Apple'},
+];
+document.getElementById("p").innerHTML =JSON.stringify(usuarios.find(usuario=>usuario.empresa=='Google'))
+//var usuario=usuarios.find(usuario=>usuario.empresa=='Google')
+//document.getElementById("p").innerHTML= usuario.map(usuarios=>Object.values(usuarios)+'<br></br>') outras forma de fazer
+</script>
+
+
+</body>
+</html>
